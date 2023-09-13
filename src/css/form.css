@@ -1,0 +1,36 @@
+form {
+  /* background-color: aqua; */
+  width: auto;
+}
+
+.form-line {
+  padding-bottom: 15px;
+}
+
+.form-line label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-fields-container {
+}
+
+.app-container {
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#domain-input-line {
+  display: flex;
+  justify-content: space-between;
+}

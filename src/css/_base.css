@@ -1,4 +1,21 @@
+* {
+  color-scheme: light dark;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
 :root {
   background-color: #242424;
   color: antiquewhite;
+}
+
+.container {
+  max-width: 960px;
+  padding-inline: 20px;
+  margin-inline: auto;
 }
