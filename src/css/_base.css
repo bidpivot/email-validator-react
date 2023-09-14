@@ -1,5 +1,10 @@
 * {
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 input,
@@ -10,12 +15,34 @@ button {
 }
 
 :root {
-  background-color: #242424;
+  /* background-color: #242424; */
   color: antiquewhite;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --text-lightmode: #04143a;
+  --text-darkmode: antiquewhite;
+  --primary-accent: #1a53ff;
+  --gray: #999999;
+  --light-gray: #f2f3f5;
+  --text-sm: 0.9rem;
+  --text: 1.3rem;
+  --text-lg: 1.6rem;
 }
 
 .container {
   max-width: 960px;
   padding-inline: 20px;
   margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+label,
+span {
+  color: var(--text-lightmode);
+}
+
+::selection {
+  background-color: turquoise;
 }
