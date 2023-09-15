@@ -26,6 +26,7 @@ button {
   --text-sm: 0.9rem;
   --text: 1.3rem;
   --text-lg: 1.6rem;
+  --default-margin-bottom: 1rem;
 }
 
 .container {
@@ -45,4 +46,10 @@ span {
 
 ::selection {
   background-color: turquoise;
+}
+
+@media (max-width: 37.5rem) {
+  .container {
+    padding: 0;
+  }
 }

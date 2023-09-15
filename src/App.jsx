@@ -6,6 +6,7 @@ import baseEmails from "./baseEmails";
 import middleEmails from "./middleEmails";
 import nickEmails from "./nickEmails";
 import SubHeader from "./components/SubHeader";
+import Clipboard from "./components/Clipboard";
 // import "./css/button.css";
 
 // import SearchInput from "./components/SearchInput";
@@ -66,101 +67,96 @@ export default function App() {
           <div className="app-container">
             <div className="col-left">
               <form onSubmit={handleFormSubmit}>
-                <div className="input-fields-continer">
+                <div className="form-line">
+                  <label htmlFor="first" aria-describedby="first">
+                    First Name:
+                  </label>
+                  <input
+                    id="first"
+                    type="text"
+                    value={first}
+                    placeholder="Michael"
+                    required
+                    onChange={event => setFirst(event.target.value)}
+                  />
+                </div>
+                <div className="form-line">
+                  <label htmlFor="last" aria-describedby="last name">
+                    Last Name:
+                  </label>
+                  <input
+                    id="last"
+                    type="text"
+                    value={last}
+                    placeholder="Dell"
+                    required
+                    onChange={event => setLast(event.target.value)}
+                  />
+                </div>
+                {expanded && (
                   <div className="form-line">
-                    <label htmlFor="first" aria-describedby="first">
-                      First Name:
+                    <label htmlFor="nick-name" aria-describedby="nick name">
+                      Nick Name:
                     </label>
                     <input
-                      id="first"
+                      id="nick"
                       type="text"
-                      value={first}
-                      placeholder="Michael"
-                      required
-                      onChange={event => setFirst(event.target.value)}
+                      value={nick}
+                      placeholder="Mike"
+                      onChange={event => setNick(event.target.value)}
                     />
                   </div>
+                )}
+                {expanded && (
                   <div className="form-line">
-                    <label htmlFor="last" aria-describedby="last name">
-                      Last Name:
+                    <label htmlFor="middle-name" aria-describedby="middle name">
+                      Middle Name:
                     </label>
                     <input
-                      id="last"
+                      id="middle"
                       type="text"
-                      value={last}
-                      placeholder="Dell"
-                      required
-                      onChange={event => setLast(event.target.value)}
+                      value={middle}
+                      placeholder=""
+                      onChange={event => setMiddle(event.target.value)}
                     />
                   </div>
-                  {expanded && (
-                    <div className="form-line">
-                      <label htmlFor="nick-name" aria-describedby="nick name">
-                        Nick Name:
-                      </label>
-                      <input
-                        id="nick"
-                        type="text"
-                        value={nick}
-                        placeholder="Mike"
-                        onChange={event => setNick(event.target.value)}
-                      />
-                    </div>
-                  )}
-                  {expanded && (
-                    <div className="form-line">
-                      <label
-                        htmlFor="middle-name"
-                        aria-describedby="middle name"
-                      >
-                        Middle Name:
-                      </label>
-                      <input
-                        id="middle"
-                        type="text"
-                        value={middle}
-                        placeholder=""
-                        onChange={event => setMiddle(event.target.value)}
-                      />
-                    </div>
-                  )}
+                )}
 
-                  <div className="form-line">
-                    <label htmlFor="domain" aria-describedby="domain">
-                      Domain:
-                    </label>
-                    <div id="domain-input-line">
-                      <span id="at-span">@</span>
-                      <input
-                        id="domain-input"
-                        type="text"
-                        value={domain}
-                        placeholder="dell"
-                        required
-                        onChange={event => setDomain(event.target.value)}
-                      />
-                      <select
-                        onChange={event => setTld(event.target.value)}
-                        value={tld}
-                        name="tld"
-                        id="tld"
-                      >
-                        <option value=".com">.com</option>
-                        <option value=".net">.net</option>
-                        <option value=".org">.org</option>
-                        <option value=".edu">.edu</option>
-                        <option value=".gov">.gov</option>
-                        <option value=".biz">.biz</option>
-                        <option value=".co">.co</option>
-                        <option value=".app">.app</option>
-                      </select>
-                    </div>
+                <div className="form-line">
+                  <label htmlFor="domain" aria-describedby="domain">
+                    Domain:
+                  </label>
+                  <div id="domain-input-line">
+                    <span id="at-span">@</span>
+                    <input
+                      id="domain-input"
+                      type="text"
+                      value={domain}
+                      placeholder="dell"
+                      required
+                      onChange={event => setDomain(event.target.value)}
+                    />
+                    <select
+                      onChange={event => setTld(event.target.value)}
+                      value={tld}
+                      name="tld"
+                      id="tld"
+                    >
+                      <option value=".com">.com</option>
+                      <option value=".net">.net</option>
+                      <option value=".org">.org</option>
+                      <option value=".edu">.edu</option>
+                      <option value=".gov">.gov</option>
+                      <option value=".biz">.biz</option>
+                      <option value=".co">.co</option>
+                      <option value=".app">.app</option>
+                    </select>
                   </div>
-                  <div className="button-container">
-                    <button type="submit" id="generate-button" className="btn">
-                      Generate Email Combinations
-                    </button>
-                  </div>
+                </div>
+                <div className="button-container">
+                  <button type="submit" id="generate-button" className="btn">
+                    Generate Email Combinations
+                  </button>
                 </div>
               </form>
               <button
@@ -176,10 +172,10 @@ export default function App() {
               <textarea
                 name="emails"
                 id="emails"
-                // cols="50"
-                // rows="20"
                 value={emails}
+                className="text"
               ></textarea>
+              <Clipboard emails={emails} />
             </div>
           </div>
         </div>

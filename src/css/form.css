@@ -4,64 +4,52 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-top: 30px;
-  border: 1px solid red;
+  border: 1px solid var(--light-gray);
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0px 4px 24px rgba(4, 20, 58, 0.04);
 }
 
-.col-left {
-  width: 100%;
-  margin: 0;
+.col-right {
+  position: relative;
+  /* this is to position the copy to clipboard icon */
 }
 
-.app-container form {
-  /* background-color: aqua; */
-  max-width: 100%;
-  margin: 0;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: var(--default-margin-bottom);
 }
 
 label {
   font-size: var(--text);
-  width: 100%;
   margin: 0;
   display: block;
-}
-
-.app-container .form-line {
-  padding-bottom: 15px;
-  max-width: 100%;
-  margin: 0;
-  outline: 1px solid red;
-}
-
-.app-container .form-line label {
-  margin: 0;
-  margin-bottom: 8px;
-}
-
-.input-fields-container {
-  width: 100%;
-  margin: 0;
+  box-sizing: border-box;
 }
 
 .app-container .form-line input,
 .app-container .form-line textarea,
 .app-container .form-line select {
   margin: 0px;
+  margin-bottom: var(--default-margin-bottom);
   padding: 0px;
   font-size: var(--text);
+  width: 100%; /* Set the width to 100% for mobile screens */
+  max-width: 100%; /* Ensure elements don't exceed the container width */
+  box-sizing: border-box; /* Include padding and border in the total width */
 }
 .form-line input {
   border-radius: 0.25rem;
   line-height: 2.5rem;
-  width: 100%;
-  background-color: aqua;
 }
 
 textarea {
   width: 100%;
-  height: 100%;
+  max-width: 100%; /* Ensure elements don't exceed the container width */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  min-height: 50dvh;
   background-color: var(--light-gray);
   border-radius: 0.5rem;
   border: none;
@@ -72,6 +60,10 @@ textarea {
 #domain-input-line {
   display: flex;
   justify-content: flex-start;
+}
+
+#domain-input-line select {
+  width: min-content;
 }
 
 #domain-input {
@@ -87,14 +79,26 @@ textarea {
   font-size: var(--text);
   display: flex;
   align-items: center;
+  margin-bottom: var(--default-margin-bottom);
 }
 
 #tld {
   border-radius: 0 0.25rem 0.25rem 0;
+  max-width: 100%;
 }
 
 @media (max-width: 37.5rem) {
   .app-container {
     grid-template-columns: 1fr;
+    padding-inline: 2px;
+  }
+
+  .col-left {
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
   }
 }

@@ -6,7 +6,6 @@ export default function nickEmails({
 }) {
   return `
 ${first}@${domain}${tld}
-${last}@${domain}${tld}
 ${first}${last}@${domain}${tld}
 ${first}.${last}@${domain}${tld}
 ${first[0]}${last}@${domain}${tld}
