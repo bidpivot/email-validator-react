@@ -31,25 +31,22 @@ export default function App() {
     nick: nick.toLowerCase(),
   };
 
-  // useEffect(setEmails(baseEmails(parameterObject)), []);
+  useEffect(() => {
+    console.log(middle);
+  }, [middle]);
 
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log(`handleFormSubmit() called`);
-    setFirst(first.toLowerCase());
+    // Use parameterObject instead of middle and nick directly
 
-    if ((middle === "") & (nick === "")) {
+    if (parameterObject.middle === "" && parameterObject.nick === "") {
       setEmails(baseEmails(parameterObject));
-    } else if (middle !== "" && nick === "") {
+    } else if (parameterObject.middle !== "" && parameterObject.nick === "") {
       setEmails(baseEmails(parameterObject) + middleEmails(parameterObject));
-    } else if (middle === "" && nick !== "") {
+    } else if (parameterObject.middle === "" && parameterObject.nick !== "") {
       setEmails(baseEmails(parameterObject) + nickEmails(parameterObject));
     }
-    return setEmails(
-      baseEmails(parameterObject) +
-        middleEmails(parameterObject) +
-        nickEmails(parameterObject)
-    );
   }
 
   function handleExpandButton(event) {
@@ -174,6 +171,7 @@ export default function App() {
                 id="emails"
                 value={emails}
                 className="text"
+                readOnly
               ></textarea>
               <Clipboard emails={emails} />
             </div>

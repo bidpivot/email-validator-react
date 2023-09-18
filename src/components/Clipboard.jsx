@@ -21,7 +21,7 @@ export default function Clipboard(props) {
   return (
     <div
       id="copyToClipboard-a"
-      class="clipboard icon"
+      className="clipboard icon"
       onClick={handleClickCopy}
     ></div>
   );
