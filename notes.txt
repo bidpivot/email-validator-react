@@ -3,12 +3,13 @@
 # CSS
 
 
-fix "undefined" issue // 
+// DONE // fix "undefined" issue
 put in some type of logo
-put in a footer
+// DONE // put in a footer
+fix footer at the bottom of the screen
 make the textArea blink when someone clicks on it
-figure out a way to display the number of results
 figure out why :focus still isn't working
+figure out a way to display the number of results
 start to use the CSS to build out a CSS template kit for future projects
 
 

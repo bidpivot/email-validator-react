@@ -4,10 +4,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-top: 30px;
+  margin-bottom: 30px;
   border: 1px solid var(--light-gray);
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0px 4px 24px rgba(4, 20, 58, 0.04);
+  height: 80vh;
 }
 
 .col-right {
@@ -91,9 +93,12 @@ textarea {
   .app-container {
     grid-template-columns: 1fr;
     padding-inline: 2px;
+    height: auto;
+    margin-bottom: 0;
   }
 
   .col-left {
+    padding-inline: 10px;
   }
 
   input,

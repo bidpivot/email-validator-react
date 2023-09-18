@@ -1,16 +1,18 @@
-#header {
+#footer {
   background-color: var(--primary-accent);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 10%;
+  padding-inline: 5px;
+  position: sticky;
+  bottom: 0;
 }
 
-#header * {
+#footer * {
   color: var(--text-darkmode);
 }
 
-#header-right {
+#footer-right {
   display: flex;
   gap: 10px;
 }
