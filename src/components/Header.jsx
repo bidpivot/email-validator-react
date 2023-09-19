@@ -1,10 +1,18 @@
-import reactLogo from "../assets/react.svg";
-
+import react from "../assets/react.svg";
+import emailLogo from "../assets/emailLogo.png";
 export default function Header() {
   return (
     <>
       <div className="" id="header">
-        <img src={reactLogo} className="logo react" alt="React logo" />
+        <div>
+          <img
+            src={react}
+            className="logo react"
+            alt=""
+            width={30}
+            height={30}
+          />
+        </div>
         <div id="header-right">
           <p>About</p>
           <p>Contact</p>
