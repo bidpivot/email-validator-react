@@ -4,6 +4,7 @@
 
 
 // DONE // fix "undefined" issue
+// fix container issue that causes horizontal scroll mobile
 put in some type of logo
 // DONE // put in a footer
 fix footer at the bottom of the screen
