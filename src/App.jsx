@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 // import "./css/form.css";
 import "./css/typograhy.css";
-import baseEmails from "./baseEmails";
-import middleEmails from "./middleEmails";
-import nickEmails from "./nickEmails";
+import baseEmails from "./helpers/baseEmails";
+import middleEmails from "./helpers/middleEmails";
+import nickEmails from "./helpers/nickEmails";
 import SubHeader from "./components/SubHeader";
 import Clipboard from "./components/Clipboard";
 // import "./css/button.css";
@@ -20,7 +20,7 @@ export default function App() {
   const [middle, setMiddle] = useState("");
   const [tld, setTld] = useState(".com");
   const [emails, setEmails] = useState(
-    baseEmails({ first: "Michael", last: "Dell", domain: "dell", tld: tld })
+    baseEmails({ first: "stephen", last: "jobs", domain: "apple", tld: tld })
   );
   const parameterObject = {
     first: first.toLowerCase(),
@@ -49,7 +49,7 @@ export default function App() {
     }
   }
 
-  function handleExpandButton(event) {
+  function handleExpandButton() {
     console.log("handleExpandButton called");
     setMiddle("");
     setNick("");
@@ -72,7 +72,7 @@ export default function App() {
                     id="first"
                     type="text"
                     value={first}
-                    placeholder="Michael"
+                    placeholder="Stephen"
                     required
                     onChange={event => setFirst(event.target.value)}
                   />
@@ -85,7 +85,7 @@ export default function App() {
                     id="last"
                     type="text"
                     value={last}
-                    placeholder="Dell"
+                    placeholder="Jobs"
                     required
                     onChange={event => setLast(event.target.value)}
                   />
@@ -99,7 +99,7 @@ export default function App() {
                       id="nick"
                       type="text"
                       value={nick}
-                      placeholder="Mike"
+                      placeholder="Steve"
                       onChange={event => setNick(event.target.value)}
                     />
                   </div>
@@ -129,7 +129,7 @@ export default function App() {
                       id="domain-input"
                       type="text"
                       value={domain}
-                      placeholder="dell"
+                      placeholder="apple"
                       required
                       onChange={event => setDomain(event.target.value)}
                     />

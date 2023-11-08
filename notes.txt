@@ -21,7 +21,7 @@ Your code looks generally well-structured, but you can make it even more organiz
 
 1. **Create Separate Components:** Divide your code into smaller components, each responsible for its own part of the UI. This makes your code easier to read and maintain.
 
-```javascript
+javascript
 // Example components:
 import Form from "./components/Form";
 import Result from "./components/Result";
