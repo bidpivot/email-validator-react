@@ -31,9 +31,7 @@ export default function App() {
     nick: nick.toLowerCase(),
   };
 
-  useEffect(() => {
-    console.log(middle);
-  }, [middle]);
+  useEffect(() => console.log(middle), [middle]);
 
   function handleFormSubmit(event) {
     event.preventDefault();
