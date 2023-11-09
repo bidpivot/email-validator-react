@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="" id="footer">
-        <p>contact</p>
+        <p>email combinator</p>
       </div>
     </footer>
   );
