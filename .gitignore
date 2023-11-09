@@ -22,8 +22,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# https://mailmeteor.com/email-permutator
-# https://docs.google.com/spreadsheets/d/17URMtNmXfEZEW9oUL_taLpGaqTDcMkA79J8TRw4xnz8/htmlview
-# https://codepen.io/MORHERO/pen/JLPzyB
-
+notes.txt
