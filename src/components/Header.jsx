@@ -6,16 +6,17 @@ export default function Header() {
       <div className="" id="header">
         <div>
           <img
-            src={react}
+            src={emailLogo}
             className="logo react"
             alt=""
             width={30}
             height={30}
+            id="logo"
           />
         </div>
         <div id="header-right">
-          <p>About</p>
-          <p>Contact</p>
+          {/* <p>About</p> */}
+          <p><a href="mailto:contact@roscoemarketing.com" target="_blank">Contact</a></p>
         </div>
       </div>
     </>

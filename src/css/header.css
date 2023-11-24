@@ -11,12 +11,17 @@
   color: var(--text-darkmode);
 }
 
-.logo {
-  width: 100%;
-  height: auto;
-}
+/* .logo { */
+/*   width: 100%; */
+/*   height: auto; */
+/* } */
 
 #header-right {
   display: flex;
   gap: 10px;
+}
+
+#logo {
+  width: 70px;
+  height: auto;
 }
