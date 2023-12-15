@@ -143,6 +143,7 @@ export default function App() {
                       <option value=".edu">.edu</option>
                       <option value=".gov">.gov</option>
                       <option value=".biz">.biz</option>
+                      <option value=".io">.io</option>
                       <option value=".co">.co</option>
                       <option value=".app">.app</option>
                     </select>
