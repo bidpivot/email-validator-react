@@ -7,6 +7,7 @@ import middleEmails from "./helpers/middleEmails";
 import nickEmails from "./helpers/nickEmails";
 import SubHeader from "./components/SubHeader";
 import Clipboard from "./components/Clipboard";
+import GmailButton from "./components/GmailButton";
 // import "./css/button.css";
 
 // import SearchInput from "./components/SearchInput";
@@ -173,6 +174,7 @@ export default function App() {
                 readOnly
               ></textarea>
               <Clipboard emails={emails} />
+              <GmailButton emails={emails} />
             </div>
           </div>
         </div>

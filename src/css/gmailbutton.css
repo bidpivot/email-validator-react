@@ -1,0 +1,36 @@
+.forwarding.icon {
+  position: absolute;
+  top: 1.3em;
+  right: 3.9em; /* Adjusted to position it next to the clipboard icon */
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 17px;
+  height: 21px;
+  border: solid 1px #333333;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.forwarding.icon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 1px;
+  border: solid 1px #333333;
+  border-radius: 1px;
+  transform: translate(-50%, -50%) rotate(45deg); /* Rotated to create a forwarding arrow */
+}
+
+.forwarding.icon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 1px;
+  background-color: #333333;
+  box-shadow: 8px 0 0 0 #333333;
+  transform: translate(-50%, -50%) rotate(-45deg); /* Rotated to create a forwarding arrow */
+}
