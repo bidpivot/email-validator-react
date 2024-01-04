@@ -6,12 +6,30 @@
   margin-left: 4px;
   width: 11px;
   height: 13px;
-  border: solid 1px #333333;
+  /* border: solid 1px #333333;
   border-top: none;
-  border-radius: 1px;
+  border-radius: 1px; */
   cursor: pointer;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.clipboard.icon:active {
+  animation: blink 0.5s linear;
+  animation-iteration-count: 3; /* Adjust this value to control the number of blinks */
+}
+
+/* 
 .clipboard.icon:before {
   top: -1px;
   left: 2px;
@@ -32,4 +50,4 @@
   content: "";
   position: absolute;
   display: block;
-}
+} */

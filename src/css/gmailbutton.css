@@ -6,12 +6,12 @@
   margin-left: 4px;
   width: 17px;
   height: 21px;
-  border: solid 1px #333333;
-  border-radius: 1px;
+  /* border: solid 1px #333333; */
+  /* border-radius: 1px; */
   cursor: pointer;
 }
 
-.forwarding.icon:before {
+/* .forwarding.icon:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -20,9 +20,9 @@
   height: 1px;
   border: solid 1px #333333;
   border-radius: 1px;
-  transform: translate(-50%, -50%) rotate(45deg); /* Rotated to create a forwarding arrow */
-}
-
+  transform: translate(-50%, -50%) rotate(45deg);
+} */
+/* 
 .forwarding.icon:after {
   content: "";
   position: absolute;
@@ -32,5 +32,5 @@
   height: 1px;
   background-color: #333333;
   box-shadow: 8px 0 0 0 #333333;
-  transform: translate(-50%, -50%) rotate(-45deg); /* Rotated to create a forwarding arrow */
-}
+  transform: translate(-50%, -50%) rotate(-45deg);
+} */
