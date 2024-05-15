@@ -9,7 +9,7 @@ You CAN actually use this tool to find someone's email address.
 
 ***Here's how it works:***
 
-1. Type in the person's name and domain name, it will suggest around 50 different possible email address combinations.
+1. Type in the person's name and domain name, it will suggest around 50 different possible email address combinations. Expand the options if person has a nickname or abbreviation. e.g. Bradley => Brad
 
 2.  Copy those addresses into the bcc of a new email in gmail.  
 
@@ -17,9 +17,11 @@ You CAN actually use this tool to find someone's email address.
 
 This repo is also useful if you want to test out a new package or demo something; you can use it it without having to build yet another to-do list.
 
+---
 
 *Coming Soon...*
 - [ ] conversion to typescript
+- [ ]  video to show how it works
 - [ ] backend with actual email tester 
 
 
