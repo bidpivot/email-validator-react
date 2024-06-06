@@ -1,5 +1,7 @@
 ## Email Validator
 
+There is a new typescript version to this SPA [available here](https://github.com/bidpivot/email-validator-typescript)
+
 This is a basic react project that I used to test out some basic react hooks.
 
 You CAN actually use this tool to find someone's email address. 
